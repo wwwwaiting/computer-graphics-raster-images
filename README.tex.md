@@ -1,8 +1,8 @@
 # Computer Graphics – Raster Images
 
-> **To get started:** Clone this repository and all its [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) dependencies using:
+> **To get started:** Clone this repository:
 > 
->     git clone --recursive https://github.com/dilevin/computer-graphics-raster-images.git
+>     git clone  https://github.com/alecjacobson/computer-graphics-raster-images.git
 
 **Do not fork:** Clicking "Fork" will create a _public_ repository. If you'd like to use GitHub while you work on your assignment, then mirror this repo as a new _private_ repository: https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private
 
@@ -107,7 +107,7 @@ its green value, then its blue value, and then the rgb values of its neighbor to
 the right and so on _across_ the row of pixels, and then moving to the next row
 _down_ the columns of rows.
 
-> Q: Suppose you have a 767×772 rgb image stored in an array called `data`. How
+> Q: Suppose you have a 767\times 772 rgb image stored in an array called `data`. How
 > would you access the green value at the pixel on the 36th row and 89th
 > column?
 >
@@ -118,7 +118,7 @@ _down_ the columns of rows.
 Natural images (e.g., photographs) only require color information, but to
 manipulate images it is often useful to also store a value representing how much
 of a pixel is "covered" by the given color. Intuitively this value (called alpha
-or $α$[⁴](#⁴latex)) represents how opaque (the opposite of _transparent_) each pixel is.
+or $\alpha$ represents how opaque (the opposite of _transparent_) each pixel is.
 When we store rgb + α image as a _4_-channel rgba image. Just like rgb images,
 rgba images are 3D arrays unrolled into a linear array in memory.
 
@@ -139,6 +139,9 @@ to convert values to decimal representations using [double precision floating
 point
 numbers](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
 `0` is converted to `0.0` and `255` to `1.0`.
+
+To simplify the implementation and to help with debugging, we will use the
+text-based .ppm formats for this assignment.
 
 ## Grayscale Images
 
@@ -186,7 +189,7 @@ methods.
 ![The Bayer-pattern image on the left has "exact" measurements of red, green and
 blue colors at different pixels. The missing color information at each pixel
 needs to be interpolated from neighbors (4 or 2). _Just do "something
-reasonable" for pixels on the very boundary of the image._ [image source](https://www.ics.uci.edu/~majumder/PHOTO/DemosaicingAndWhiteBalancing.pdf) ](images/bayer.png)
+reasonable" for pixels on the very boundary of the image._ [image source](https://www.ics.uci.edu/~majumder/PHOTO/DemosaicingAndWhiteBalancing.pdf) ](images/bayer-info.png)
 
 ## Color representation
 
@@ -194,7 +197,7 @@ RGB is just one way to represent a color. Another useful representation is store
 the [hue, saturation, and value](https://en.wikipedia.org/wiki/HSL_and_HSV) of a
 color. This "hsv" representation also has 3-channels: typically, the
 [hue](https://en.wikipedia.org/wiki/Hue) or `h` channel is stored in degrees
-(i.e., on a periodic scale) in the range $[0°,360°]$ and the
+(i.e., on a periodic scale) in the range $[0^\circ ,360^\circ ]$ and the
 [saturation](https://en.wikipedia.org/wiki/Colorfulness) `s` and
 [value](https://en.wikipedia.org/wiki/Lightness) `v` are given as absolute
 values in $[0,1]$.
@@ -260,7 +263,7 @@ Horizontally reflect an image (like a mirror)
 
 ### `src/rotate.cpp`
 
-Rotate an image 90°  counter-clockwise
+Rotate an image 90^\circ   counter-clockwise
 
 ![`./raster
 ../data/dog.png` should produce this image in
@@ -335,19 +338,19 @@ Compute C = A Over B, where A and B are semi-transparent rgba images and
 ### Submission
 
 Submit your completed homework on MarkUs. [Open the MarkUs course 
-page](https://markus.teach.cs.toronto.edu/csc418-2019-01) and submit all the `.cpp` files in your `src/` directory under
+page](https://markus.teach.cs.toronto.edu/csc418-2019-09/) and submit all the `.cpp` files in your `src/` directory under
 Assignment 1: Raster Images in the `raster-images` repository.
 
 ### Questions? 
 
 Direct your questions to the [Issues page of this
-repository](https://github.com/dilevin/computer-graphics-raster-images/issues).
+repository](https://github.com/alecjacobson/computer-graphics-raster-images/issues).
 
 ### Answers?
 
 Help your fellow students by answering questions or positions helpful tips on
 [Issues page of this
-repository](https://github.com/dilevin/computer-graphics-raster-images/issues).
+repository](https://github.com/alecjacobson/computer-graphics-raster-images/issues).
 
 -----------------------------------------------------------------------------
 
@@ -367,6 +370,8 @@ repository](https://github.com/dilevin/computer-graphics-raster-images/issues).
 >     sudo apt-get install cmake
 >     sudo apt-get install libx11-dev
 >     sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev
+>     sudo apt-get install libxinerama1 libxinerama-dev
+>     sudo apt-get install libxcursor-dev
 >     sudo apt-get install libxrandr-dev
 >     sudo apt-get install libxi-dev
 >     sudo apt-get install libxmu-dev
@@ -375,19 +380,7 @@ repository](https://github.com/dilevin/computer-graphics-raster-images/issues).
 >
 > #### ³ Windows Users
 >
-> Our assignments only support the Microsoft Visual Studio 2015 compiler in
+> Our assignments only support the Microsoft Visual Studio 2015 (and later) compiler in
 > 64bit mode. It will not work with a 32bit build and it will not work with
 > older versions of visual studio.
->
-> #### ⁴ LaTeX
->
-> This markdown document, and those for all other assignments, contains
-> $\LaTeX$ math. GitHub just shows the un-evaluated LaTeX code, but other
-> markdown browsers may show the typeset math. Alaternatively, open the
-> `README.html` (must be online) to view the equations.
->
-> For reference, you can generate `README.html` from the `README.md` using
-> [multimarkdown](http://fletcherpenney.net/multimarkdown/):
->
->     cat markdown/header.md README.md | multimarkdown --process-html -o README.html
 >
