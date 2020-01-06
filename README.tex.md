@@ -2,7 +2,7 @@
 
 > **To get started:** Clone this repository:
 > 
->     git clone  https://github.com/alecjacobson/computer-graphics-raster-images.git
+>     git clone  https://github.com/dilevin/computer-graphics-raster-images.git
 
 **Do not fork:** Clicking "Fork" will create a _public_ repository. If you'd like to use GitHub while you work on your assignment, then mirror this repo as a new _private_ repository: https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private
 
@@ -344,13 +344,13 @@ Assignment 1: Raster Images in the `raster-images` repository.
 ### Questions? 
 
 Direct your questions to the [Issues page of this
-repository](https://github.com/alecjacobson/computer-graphics-raster-images/issues).
+repository](https://github.com/dilevin/computer-graphics-raster-images/issues).
 
 ### Answers?
 
 Help your fellow students by answering questions or positions helpful tips on
 [Issues page of this
-repository](https://github.com/alecjacobson/computer-graphics-raster-images/issues).
+repository](https://github.com/dilevin/computer-graphics-raster-images/issues).
 
 -----------------------------------------------------------------------------
 
