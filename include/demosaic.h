@@ -7,7 +7,7 @@
 //
 // Inputs:
 //   bayer  width*height array containing interleaved color intensities in
-//     the GBRG bayer pattern.
+//     the BGGR bayer pattern.
 //   width  image width (i.e., number of columns)
 //   height  image height (i.e., number of rows)
 // Outputs:

@@ -133,10 +133,10 @@ of our tasks: the [.ppm](https://en.wikipedia.org/wiki/Netpbm_format#File_format
 Like many image file formats, .ppm uses 8 bits per color value. Color
 intensities are represented as an integer between `0` (0% intensity) and `255`
 (100% intensity). In our programs we will use `unsigned char` to represent these
-values when reading, writing and doing simple operations. For numerically
-sensitive computations (e.g., conversion between rgb and hsv), it is convenient
-to convert values to decimal representations using [double precision floating
-point
+values when storing in memory and doing simple operations, then use ASCII encoded 
+integers when writing to .ppm files. For numerically sensitive computations 
+(e.g., conversion between rgb and hsv), it is convenient to convert values to 
+decimal representations using [double precision floating point
 numbers](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
 `0` is converted to `0.0` and `255` to `1.0`.
 

@@ -14,7 +14,7 @@
 //   height  image height (i.e., number of rows)
 // Outputs:
 //   bayer  width*height array containing interleaved color intensities in the
-//     GBRG bayer pattern.
+//     BGGR bayer pattern.
 void simulate_bayer_mosaic(
   const std::vector<unsigned char> & rgb,
   const int & width,
