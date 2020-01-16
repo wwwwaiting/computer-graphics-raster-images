@@ -167,10 +167,9 @@ with a single color channel per pixel. This information is stored as a seemingly
 1-channel image, but with an understood convention for interpreting each pixel
 as the red, green or blue intensity value given some pattern. The most common is
 the [Bayer pattern](https://en.wikipedia.org/wiki/Bayer_filter).  In this
-assignment, we'll assume the top left pixel is green, its right neighbor is blue
-and neighbor below is red, and its
-[kitty-corner](https://en.wiktionary.org/wiki/kitty-corner#Adverb) neighbor is
-also green.
+assignment, we'll assume the top left pixel is blue, its right neighbor is green
+and neighbor below is also green, and its
+[kitty-corner](https://en.wiktionary.org/wiki/kitty-corner#Adverb) neighbor is red.
 
 > Q: Why are more sensors devoted to green?
 >
@@ -335,8 +334,8 @@ Compute C = A Over B, where A and B are semi-transparent rgba images and
 
 ### Submission
 
-Submit your completed homework on [MarkUs](https://markus.teach.cs.toronto.edu/csc418-2020-01/). Open the [MarkUs course 
-page](https://markus.teach.cs.toronto.edu/csc418-2020-01/) and submit all the `.cpp` files in your `src/` directory under
+Submit your completed homework on MarkUs. Open the MarkUs course 
+page and submit all the `.cpp` files in your `src/` directory under
 Assignment 1: Raster Images in the `raster-images` repository.
 
 ### Questions? 
