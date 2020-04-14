@@ -9,6 +9,13 @@ void rgb_to_gray(
   gray.resize(height*width);
   ////////////////////////////////////////////////////////////////////////////
   // Add your code here
+  int size = height*width;
+  for (int idx = 0; idx < size; ++idx){
+    int r = idx * 3;
+    int g = r + 1;
+    int b = g + 1;
+    gray[idx] = 0.2126*rgb[r] + 0.7152*rgb[g] + 0.0722*rgb[b]; 
+  }
   ////////////////////////////////////////////////////////////////////////////
 }
 
